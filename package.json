@@ -1,6 +1,6 @@
 {
   "name": "webpack-rtl-wrap-plugin",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Wraps CSS files with [dir=ltr|rtl] to allow both RTL and LTR stylesheets loaded on the same page",
   "main": "index.js",
   "scripts": {
@@ -10,10 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "async": "^2.3.0",
+    "fs-simple-cache": "^1.0.0",
+    "lodash.merge": "^4.6.0",
     "postcss": "^5.2.16",
-    "postcss-wrap": "0.0.4"
+    "postcss-wrap": "0.0.4",
+    "webpack-sources": "^0.2.3"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FrontendMatter/webpack-rtl-wrap-plugin.git"
