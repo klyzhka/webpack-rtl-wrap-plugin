@@ -24,8 +24,9 @@ class WebpackRTLWrapPlugin {
           
           if (this.options.testCss.test(file)) {
             const source = asset.source()
+            const key = source + isRTL
             let content
-            if (content = cache.get(source).content) {
+            if (content = cache.get(key).content) {
               promise = promise.then(() => content)
             }
             else {
@@ -34,7 +35,7 @@ class WebpackRTLWrapPlugin {
                   require('postcss-wrap')({ selector: '[dir=' + (isRTL ? 'rtl' : 'ltr') + ']', skip: /^html/ })
                 ])
                 .process(source, {}).then(function (result) {
-                  cache.put(source, { content: result.css })
+                  cache.put(key, { content: result.css })
                   return result.css
                 })
               })
