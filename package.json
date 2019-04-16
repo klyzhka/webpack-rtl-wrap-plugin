@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "async": "^2.3.0",
-    "fs-simple-cache": "^1.0.0",
+    "fs-simple-cache": "^1.2.0",
     "lodash.merge": "^4.6.0",
     "postcss": "^5.2.16",
     "postcss-wrap": "0.0.4",
